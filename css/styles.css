@@ -1,0 +1,15 @@
+#heading {
+    font-size: 4rem;
+}
+
+#ball {
+    background-color: black;
+    width: 25rem;
+    height: 25rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+#prompt {
+    font-size: 3rem;
+}
