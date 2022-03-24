@@ -1,14 +1,11 @@
-#heading {
-    font-size: 4rem;
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid red;
 }
 
-#answers {
-    width: 25rem;
-    height: 25rem;
-    margin-top: 2rem;
-    border-radius: 50%;
-}
-
-#prompt {
-    font-size: 3rem;
+#ball {
+    width: 30rem;
+    height: 30rem;
 }
