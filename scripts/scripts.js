@@ -40,7 +40,6 @@ function ask(){
         ball.style.width = "18rem";
         ball.style.height = "18rem";
         ball.src = 'images\\magic8ball_start.png';
-        label.innerHTML = "Ask another question";
     },2000);
 }
 
