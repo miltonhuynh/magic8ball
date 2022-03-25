@@ -6,6 +6,10 @@ function random() {
 }
 
 function ask(){
+    
+    ball.style.width = "22rem";
+    ball.style.height = "22rem";
+
     var images = [
         'images\\magic8ball_1.png',
         'images\\magic8ball_2.png',
