@@ -1,5 +1,6 @@
 const button = document.querySelector('button');
 const ball = document.getElementById('ball');
+const label = document.getElementById('label');
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -34,6 +35,12 @@ function ask(){
     ]
 
     ball.src = images[random()];
+
+    setTimeout(function() {
+        ball.style.width = "20rem";
+        ball.style.height = "20rem";
+        ball.src = 'images\\magic8ball_start.png';
+    },1200);
 }
 
 button.addEventListener("click",ask);
