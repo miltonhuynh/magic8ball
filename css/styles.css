@@ -6,9 +6,9 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: green;
     width: 70%;
     height: 95vh;
+    background-image: "images/ball_background.jpg";
 }
 
 #title {
@@ -52,5 +52,6 @@ body {
 }
 
 #history_title {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
 }
