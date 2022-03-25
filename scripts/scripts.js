@@ -37,10 +37,11 @@ function ask(){
     ball.src = images[random()];
 
     setTimeout(function() {
-        ball.style.width = "20rem";
-        ball.style.height = "20rem";
+        ball.style.width = "18rem";
+        ball.style.height = "18rem";
         ball.src = 'images\\magic8ball_start.png';
-    },1200);
+        label.innerHTML = "Ask another question";
+    },2000);
 }
 
 button.addEventListener("click",ask);

@@ -7,6 +7,7 @@ body {
 #title {
     font-size: 5rem;
     font-family: Calibri;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 450px) {
@@ -33,8 +34,9 @@ body {
 }
 
 #ball {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
+    transition: 1s;
 }
 
 #footer {
