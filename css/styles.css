@@ -34,8 +34,8 @@ form {
     margin-bottom: 1rem;
     width: 40rem;
     height: 2rem;
-    border: 2px solid red;
     font-size: 2rem;
+    text-align: center;
 }
 
 #button {
