@@ -34,6 +34,7 @@ function ask() {
     question.style.backgroundColor = "transparent";
     question.style.color = "white";
     ball.style.transform = "translate(100px)";
+    ball.src = "images\\magic8ball_extra.png";
     setTimeout(function() {
         ball.style.transform = "translate(-100px)";
     }, 500);
@@ -83,6 +84,9 @@ function ask() {
     setTimeout(function() {
         shrink();
     },5500);
+    setTimeout(function() {
+        ball.src = "images\\magic8ball_start.png";
+    },7000);
     setTimeout(function() {
     question.style.backgroundColor = "white";
     question.style.color = "black";
