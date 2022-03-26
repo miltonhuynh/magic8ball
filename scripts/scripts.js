@@ -7,13 +7,23 @@ function random() {
 }
 
 function grow() {
-    ball.style.width = "22rem";
-    ball.style.height = "22rem";
+    if (window.matchMedia("(max-width: 450px)").matches) {
+        ball.style.width = "20rem";
+        ball.style.height = "20rem";
+    } else {
+        ball.style.width = "30rem";
+        ball.style.height = "30rem";
+  }
 }
 
 function shrink() {
-    ball.style.width = "18rem";
-    ball.style.height = "18rem";
+    if (window.matchMedia("(max-width: 450px)").matches) {
+        ball.style.width = "15rem";
+        ball.style.height = "15rem";
+    } else {
+        ball.style.width = "25rem";
+        ball.style.height = "25rem";
+  }
 }
 
 function ask() {     
@@ -60,10 +70,10 @@ function ask() {
     }, 3000);
     setTimeout(function() {
         shrink();
-    },5000);
+    },7000);
     setTimeout(function () {
         ball.src = 'images\\magic8ball_start.png';
-    }, 6500);
+    }, 10000);
 }
 
 button.addEventListener("click",ask);
