@@ -75,7 +75,7 @@ function ask() {
     },7000);
     setTimeout(function () {
         ball.src = 'images\\magic8ball_start.png';
-    }, 10000);
+    }, 8000);
 }
 
 button.addEventListener("click",ask);
