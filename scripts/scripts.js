@@ -1,6 +1,6 @@
 const button = document.querySelector('button');
 const ball = document.getElementById('ball');
-const label = document.getElementById('label');
+const title = document.getElementById('title');
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -13,6 +13,7 @@ function grow() {
     } else {
         ball.style.width = "30rem";
         ball.style.height = "30rem";
+        title.style.fontSize = "4rem";
   }
 }
 
@@ -23,6 +24,7 @@ function shrink() {
     } else {
         ball.style.width = "25rem";
         ball.style.height = "25rem";
+        title.style.fontSize = "6rem";
   }
 }
 
