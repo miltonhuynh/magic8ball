@@ -1,8 +1,8 @@
 const button = document.querySelector('button');
 const ball = document.getElementById('ball');
 const title = document.getElementById('title');
-const question = document.getElementById('ask');
-const form = document.forms.question;
+const question_box = document.getElementById('ask');
+const form = document.forms.form;
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -30,9 +30,14 @@ function shrink() {
   }
 }
 
-function ask() {
-    question.style.backgroundColor = "transparent";
-    question.style.color = "white";
+function ask(text) {
+    question_box.remove();
+    const display = document.createElement('div');
+    display.innerHTML = "You asked: " + text;
+    display.style.color = "white";
+    display.style.fontSize = "5rem";
+    document.getElementById('label').after(display);
+
     ball.style.transform = "translate(100px)";
     ball.src = "images\\magic8ball_extra.png";
     setTimeout(function() {
@@ -86,12 +91,19 @@ function ask() {
     },5500);
     setTimeout(function() {
         ball.src = "images\\magic8ball_start.png";
+        display.remove();
+        document.getElementById('label').after(question_box);
     },7000);
-    setTimeout(function() {
-    question.style.backgroundColor = "white";
-    question.style.color = "black";
-    },8000);
 }
 
-button.addEventListener("click",ask);
-
+form.onsubmit = function(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const text = data.get('text');
+    
+    if (text == "") {
+        alert("You didn't ask a question");
+    } else {
+        ask(text);
+    }
+  }
