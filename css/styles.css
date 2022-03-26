@@ -15,7 +15,12 @@ body {
     color: white;
     transition: 1s;
 }
-  
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #label {
     font-size: 3rem;
@@ -35,7 +40,7 @@ body {
 
 #button {
     height: 3rem;
-    width: 4rem;
+    width: 7rem;
     font-size: 1.5rem;
 }
 
