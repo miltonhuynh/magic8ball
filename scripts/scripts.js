@@ -35,7 +35,13 @@ function ask(text) {
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
     display.style.color = "white";
-    display.style.fontSize = "5rem";
+
+    if (window.matchMedia("(max-width: 450px)").matches) {
+        display.style.fontSize = "3rem";
+    } else {
+        display.style.fontSize = "5rem";
+    }
+
     document.getElementById('label').after(display);
 
     ball.style.transform = "translate(100px)";
