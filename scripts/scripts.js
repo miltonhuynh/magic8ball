@@ -10,12 +10,12 @@ function random() {
 
 function grow() {
     if (window.matchMedia("(max-width: 450px)").matches) {
-        ball.style.width = "20rem";
-        ball.style.height = "20rem";
+        ball.style.width = "18rem";
+        ball.style.height = "18rem";
     } else {
-        ball.style.width = "30rem";
-        ball.style.height = "30rem";
-        title.style.fontSize = "4rem";
+        ball.style.width = "23rem";
+        ball.style.height = "23rem";
+        title.style.fontSize = "5rem";
   }
 }
 
@@ -24,22 +24,23 @@ function shrink() {
         ball.style.width = "15rem";
         ball.style.height = "15rem";
     } else {
-        ball.style.width = "25rem";
-        ball.style.height = "25rem";
+        ball.style.width = "20rem";
+        ball.style.height = "20rem";
         title.style.fontSize = "6rem";
   }
 }
 
 function ask(text) {
+    document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
     question_box.remove();
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
     display.style.color = "white";
 
     if (window.matchMedia("(max-width: 450px)").matches) {
-        display.style.fontSize = "3rem";
+        display.style.fontSize = "2.5rem";
     } else {
-        display.style.fontSize = "5rem";
+        display.style.fontSize = "3.5rem";
     }
 
     document.getElementById('label').after(display);
@@ -94,9 +95,9 @@ function ask(text) {
     }, 3500);
     setTimeout(function() {
         shrink();
+        document.body.style.backgroundImage = "url(images/ball_background.jpg)"; 
     },5500);
-    setTimeout(function() {
-        ball.src = "images\\magic8ball_start.png";
+    setTimeout(function() { 
         display.remove();
         document.getElementById('label').after(question_box);
     },7000);
