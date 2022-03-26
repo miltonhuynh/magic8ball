@@ -43,9 +43,10 @@ body {
 }
 
 #ball {
+    transition: 1s;
     width: 18rem;
     height: 18rem;
-    transition: 1s;
+    position: relative;
 }
 
 #history {

@@ -6,10 +6,28 @@ function random() {
     return Math.floor(Math.random() * 19);
 }
 
-function ask(){
-    
+function grow() {
     ball.style.width = "22rem";
     ball.style.height = "22rem";
+}
+
+function shrink() {
+    ball.style.width = "18rem";
+    ball.style.height = "18rem";
+}
+
+function ask() {     
+    ball.style.transform = "translate(100px)";
+    setTimeout(function() {
+        ball.style.transform = "translate(-100px)";
+    }, 500);
+    setTimeout(function() {
+        ball.style.transform = "translate(100px)";
+    }, 1000);
+    setTimeout(function() {
+        ball.style.transform = "translate(0px)";
+    }, 1500);
+
 
     var images = [
         'images\\magic8ball_1.png',
@@ -34,13 +52,18 @@ function ask(){
         'images\\magic8ball_20.png',
     ]
 
-    ball.src = images[random()];
-
     setTimeout(function() {
-        ball.style.width = "18rem";
-        ball.style.height = "18rem";
+        ball.src = images[random()];
+    }, 2500);
+    setTimeout(function() {
+        grow();
+    }, 3000);
+    setTimeout(function() {
+        shrink();
+    },5000);
+    setTimeout(function () {
         ball.src = 'images\\magic8ball_start.png';
-    },2000);
+    }, 6500);
 }
 
 button.addEventListener("click",ask);
