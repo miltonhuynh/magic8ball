@@ -2,7 +2,9 @@ const button = document.querySelector('button');
 const ball = document.getElementById('ball');
 const title = document.getElementById('title');
 const question_box = document.getElementById('ask');
+const label = document.getElementById('label');
 const form = document.forms.form;
+const running = false;
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -15,7 +17,9 @@ function grow() {
     } else {
         ball.style.width = "23rem";
         ball.style.height = "23rem";
-        title.style.fontSize = "5rem";
+        title.style.fontSize = "4rem";
+        label.style.fontSize = "2.5rem";
+        document.getElementById('question_box').style.fontSize = "2.7rem";
   }
 }
 
@@ -26,7 +30,9 @@ function shrink() {
     } else {
         ball.style.width = "20rem";
         ball.style.height = "20rem";
-        title.style.fontSize = "6rem";
+        title.style.fontSize = "4.5rem";
+        label.style.fontSize = "3rem";
+        document.getElementById('question_box').style.fontSize = "3.5rem";
   }
 }
 
@@ -35,7 +41,9 @@ function ask(text) {
     question_box.remove();
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
+    display.setAttribute("id", "question_box");
     display.style.color = "white";
+    display.style.transition = "1s";
 
     if (window.matchMedia("(max-width: 450px)").matches) {
         display.style.fontSize = "2.5rem";
@@ -100,7 +108,7 @@ function ask(text) {
     setTimeout(function() { 
         display.remove();
         document.getElementById('label').after(question_box);
-    },7000);
+    },7500);
 }
 
 form.onsubmit = function(event) {

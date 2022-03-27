@@ -9,8 +9,8 @@ body {
 }
 
 #title {
-    font-size: 6rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4.5rem;
+    font-family: 'Shadows Into Light', cursive;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     color: white;
@@ -28,6 +28,8 @@ form {
     margin-bottom: 0.5rem;
     font-family: Calibri;
     color: white;
+    font-family: 'Indie Flower', cursive;
+    transition: 1s;
 }
 
 #ask {
@@ -37,6 +39,15 @@ form {
     height: 2rem;
     font-size: 2rem;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 3px solid purple;
+    transition: 0.3s;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+#ask:hover {
+    border: 5px solid yellow;
 }
 
 #button {
@@ -44,6 +55,8 @@ form {
     width: 7rem;
     font-size: 1.5rem;
     transition: 0.3s;
+    background-color: rgba(230, 32, 213, 0.25);
+    color: white;
 }
 
 #button:hover {
