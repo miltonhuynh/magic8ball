@@ -5,7 +5,6 @@ const question_box = document.getElementById('ask');
 const label = document.getElementById('label');
 const form = document.forms.form;
 const running = false;
-const pre_load = "url(images/ball_background_blur.jpg)"; 
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -38,7 +37,7 @@ function shrink() {
 }
 
 function ask(text) {
-    document.body.style.backgroundImage = pre_load; 
+    document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
     question_box.remove();
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
