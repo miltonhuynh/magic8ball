@@ -4,7 +4,6 @@ const title = document.getElementById('title');
 const question_box = document.getElementById('ask');
 const label = document.getElementById('label');
 const form = document.forms.form;
-const running = false;
 
 function random() {
     return Math.floor(Math.random() * 19);
