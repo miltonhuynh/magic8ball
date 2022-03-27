@@ -43,6 +43,7 @@ function ask(text) {
     display.innerHTML = "You asked: " + text;
     display.setAttribute("id", "question_box");
     display.style.color = "white";
+    display.style.fontFamily = "Didact Gothic";
     display.style.transition = "1s";
 
     if (window.matchMedia("(max-width: 450px)").matches) {
