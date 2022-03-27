@@ -87,3 +87,7 @@ form {
         width: 20rem;
     }
 }
+
+#footer {
+    bottom: 0;
+}
