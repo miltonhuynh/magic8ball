@@ -36,18 +36,18 @@ form {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     width: 40rem;
-    height: 2rem;
+    height: 2.5rem;
     font-size: 2rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    border: 3px solid purple;
+    border: 2px solid purple;
     transition: 0.3s;
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 
 #ask:hover {
-    border: 5px solid yellow;
+    border: 7px solid purple;
 }
 
 #button {
@@ -60,9 +60,9 @@ form {
 }
 
 #button:hover {
-    height: 4rem;
-    width: 10rem;
-    font-size: 2.5rem;
+    height: 3.5rem;
+    width: 8.5rem;
+    font-size: 2rem;
 }
 
 #ball {
