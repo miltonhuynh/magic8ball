@@ -36,6 +36,7 @@ function shrink() {
 }
 
 function ask(text) {
+    button.remove();
     document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
     question_box.remove();
     const display = document.createElement('div');
@@ -108,6 +109,7 @@ function ask(text) {
     setTimeout(function() { 
         display.remove();
         document.getElementById('label').after(question_box);
+        question_box.after(button);
     },7500);
 }
 
