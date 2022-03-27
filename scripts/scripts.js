@@ -5,6 +5,7 @@ const question_box = document.getElementById('ask');
 const label = document.getElementById('label');
 const form = document.forms.form;
 const running = false;
+const pre_load = "url(images/ball_background_blur.jpg)"; 
 
 function random() {
     return Math.floor(Math.random() * 19);
@@ -37,7 +38,7 @@ function shrink() {
 }
 
 function ask(text) {
-    document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
+    document.body.style.backgroundImage = pre_load; 
     question_box.remove();
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
@@ -49,7 +50,7 @@ function ask(text) {
     if (window.matchMedia("(max-width: 450px)").matches) {
         display.style.fontSize = "2.5rem";
     } else {
-        display.style.fontSize = "3.5rem";
+        display.style.fontSize = "3.3rem";
     }
 
     document.getElementById('label').after(display);
