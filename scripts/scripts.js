@@ -53,24 +53,43 @@ function ask(text) {
     }
 
     document.getElementById('label').after(display);
-
-    ball.style.transform = "translate(100px)";
     ball.src = "images\\magic8ball_extra.png";
-    setTimeout(function() {
-        ball.style.transform = "translate(-100px)";
-    }, 500);
-    setTimeout(function() {
-        ball.style.transform = "translate(100px)";
-    }, 1000);
-    setTimeout(function() {
-        ball.style.transform = "translate(-100px)";
-    }, 1500);
-    setTimeout(function() {
-        ball.style.transform = "translate(100px)";
-    }, 2000);
-    setTimeout(function() {
-        ball.style.transform = "translate(0px)";
-    }, 2500);
+
+    if (window.matchMedia("(max-width: 450px)").matches) {
+        ball.style.transform = "translate(75px)";
+        setTimeout(function() {
+            ball.style.transform = "translate(-75px)";
+        }, 500);
+        setTimeout(function() {
+            ball.style.transform = "translate(75px)";
+        }, 1000);
+        setTimeout(function() {
+            ball.style.transform = "translate(-75px)";
+        }, 1500);
+        setTimeout(function() {
+            ball.style.transform = "translate(75px)";
+        }, 2000);
+        setTimeout(function() {
+            ball.style.transform = "translate(0px)";
+        }, 2500);
+    } else {
+        ball.style.transform = "translate(250px)";
+        setTimeout(function() {
+            ball.style.transform = "translate(-250px)";
+        }, 500);
+        setTimeout(function() {
+            ball.style.transform = "translate(250px)";
+        }, 1000);
+        setTimeout(function() {
+            ball.style.transform = "translate(-250px)";
+        }, 1500);
+        setTimeout(function() {
+            ball.style.transform = "translate(250px)";
+        }, 2000);
+        setTimeout(function() {
+            ball.style.transform = "translate(0px)";
+        }, 2500);
+    }
 
 
     var images = [
