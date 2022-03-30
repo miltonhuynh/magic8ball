@@ -14,11 +14,12 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     color: white;
-    transition: 1s;
+    transition: 0.5s;
+    text-shadow: 10px 10px 5px black;
 }
 
 #title:hover {
-    font-size: 6rem;
+    font-size: 5.25rem;
 }
 
 form {
@@ -30,10 +31,14 @@ form {
 #label {
     font-size: 3rem;
     margin-bottom: 0;
-    font-family: Calibri;
     color: white;
+    text-shadow: 5px 5px 4px black;
     font-family: 'Indie Flower', cursive;
-    transition: 1s;
+    transition: 0.5s;
+}
+
+#label:hover {
+    font-size: 3.5rem;
 }
 
 #ask {
@@ -50,23 +55,21 @@ form {
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 
-#ask:hover {
-    border: 7px solid purple;
-}
-
 #button {
     height: 3rem;
     width: 7rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: 0.3s;
     background-color: rgba(230, 32, 213, 0.25);
     color: white;
+    text-shadow: 3px 3px 2px black;
+    font-family: 'Staatliches', cursive;
 }
 
 #button:hover {
-    height: 3.5rem;
-    width: 8.5rem;
-    font-size: 2rem;
+    height: 3.3rem;
+    width: 8.2rem;
+    font-size: 2.5rem;
 }
 
 #ball {
@@ -88,14 +91,15 @@ form {
 
 .fab {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     transition: 0.5s;
+    text-shadow: 5px 5px 2px black;
 }
 
 .fab:hover {
     transform: translateY(-10px);
     color: yellow;
-
+}
 
 @media (max-width: 450px) {
     #title {
@@ -110,5 +114,8 @@ form {
     }
     #ask {
         width: 20rem;
+    }
+    #footer {
+        display: none;
     }
 }
