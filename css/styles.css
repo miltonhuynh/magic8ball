@@ -80,25 +80,25 @@ form {
 }
 
 #footer {
-    bottom: 2rem;
+    top: 1rem;
+    left: 1rem;
     position: absolute;
     color: white;
     width: 100%;
-    text-align: center;
     height: 2.5rem;
     padding-top: 0.5rem;
 }
 
 .fab {
     color: white;
-    font-size: 4rem;
+    font-size: 6rem;
     transition: 0.5s;
     text-shadow: 5px 5px 2px black;
 }
 
 .fab:hover {
-    transform: translateY(-10px);
-    color: yellow;
+    color: lightblue;
+    font-size: 8rem;
 }
 
 @media (max-width: 450px) {
