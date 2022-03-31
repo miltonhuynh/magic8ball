@@ -14,8 +14,8 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     color: white;
-    transition: 0.5s;
-    text-shadow: 10px 10px 5px black;
+    transition: 0.6s;
+    text-shadow: 10px 10px 2px black;
 }
 
 #title:hover {
@@ -34,7 +34,7 @@ form {
     color: white;
     text-shadow: 5px 5px 4px black;
     font-family: 'Indie Flower', cursive;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 #label:hover {
@@ -60,7 +60,8 @@ form {
     width: 7rem;
     font-size: 2rem;
     transition: 0.3s;
-    background-color: rgba(230, 32, 213, 0.25);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     color: white;
     text-shadow: 3px 3px 2px black;
     font-family: 'Staatliches', cursive;
@@ -81,7 +82,6 @@ form {
 
 #footer {
     top: 1rem;
-    left: 1rem;
     position: absolute;
     color: white;
     width: 100%;
@@ -91,14 +91,16 @@ form {
 
 .fab {
     color: white;
+    position: absolute;
+    left: 1rem;
     font-size: 6rem;
-    transition: 0.5s;
+    transition: 0.6s;
     text-shadow: 5px 5px 2px black;
 }
 
 .fab:hover {
-    color: lightblue;
-    font-size: 8rem;
+    color: black;
+    font-size: 7rem;
 }
 
 @media (max-width: 450px) {
