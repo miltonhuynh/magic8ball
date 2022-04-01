@@ -39,19 +39,22 @@ function shrink() {
 }
 
 function ask(text) {
-    // Removes 'Ask' button until animation is complete
+    // Removes 'Ask' button until animation is complete so user can't interrupt
     button.remove();
     // Blurs background image during animation
     document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
 
-    // Removes question box in form and replaces with question that user asked
+    // Removes question box in form
     question_box.remove();
+
+    // Displays question user asked using parameter 'text' passed into this function
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
     display.setAttribute("id", "question_box");
     display.style.color = "white";
     display.style.fontFamily = "Didact Gothic";
     display.style.transition = "1s";
+    
     // Sets size of question user asked depending on size of user's window
     if (window.matchMedia("(max-width: 450px)").matches) {
         display.style.fontSize = "2.5rem";

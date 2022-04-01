@@ -41,17 +41,21 @@
 <body>
     <h1 id="title">Magic 8 Ball</h1>
 
+    <!-- Pre-loads alternate background image to avoid 'white flash' during transition -->
     <img src="images/ball_background_blur.jpg" style="display:none;"></div>
-
+    <!-- Container for Magic 8 ball image -->
     <div id="answers">
+      <!-- Default image for Magic 8 ball, will randomly changed using JavaScript -->
       <img src="images\magic8ball_start.png" id="ball">
     </div>
+    <!-- Container for form, includes 'Ask me anything' label, a text input field and a submit button -->
     <form name="form">
       <label for="ask" id="label">Ask me anything!</label>
       <input type="text" name="text" id="ask">
       <button id="button">Ask</button>
     </form>
 
+    <!-- Link to repository contain source code for this project -->
     <div id="github">
       <a href="https://github.com/miltonhuynh/magic8ball"><i class="fab fa-github"></i></a>
     </div>
