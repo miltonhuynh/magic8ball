@@ -61,6 +61,7 @@ form {
     font-size: 2rem;
     transition: 0.3s;
     background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid gray;
     border-radius: 50%;
     color: white;
     text-shadow: 3px 3px 2px black;
@@ -71,6 +72,7 @@ form {
     height: 3.3rem;
     width: 8.2rem;
     font-size: 2.5rem;
+    border: 2px solid white;
 }
 
 #ball {

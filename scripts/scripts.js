@@ -14,11 +14,11 @@ function grow() {
         ball.style.width = "18rem";
         ball.style.height = "18rem";
     } else {
-        ball.style.width = "23rem";
-        ball.style.height = "23rem";
-        title.style.fontSize = "4rem";
-        label.style.fontSize = "2.5rem";
-        document.getElementById('question_box').style.fontSize = "2.7rem";
+        ball.style.width = "27rem";
+        ball.style.height = "27rem";
+        title.style.fontSize = "3rem";
+        label.style.fontSize = "2rem";
+        document.getElementById('question_box').style.fontSize = "2rem";
   }
 }
 
@@ -53,8 +53,11 @@ function ask(text) {
     }
 
     document.getElementById('label').after(display);
+
+    // Changes image of ball to blank while animation is running
     ball.src = "images\\magic8ball_extra.png";
 
+    // Animation for movement of ball, moves less on a smaller screen
     if (window.matchMedia("(max-width: 450px)").matches) {
         ball.style.transform = "translate(75px)";
         setTimeout(function() {
@@ -91,7 +94,7 @@ function ask(text) {
         }, 2500);
     }
 
-
+    // This array holds all the possible answers "images", will be randomly selected.
     var images = [
         'images\\magic8ball_1.png',
         'images\\magic8ball_2.png',
