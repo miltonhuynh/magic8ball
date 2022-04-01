@@ -5,10 +5,12 @@ const question_box = document.getElementById('ask');
 const label = document.getElementById('label');
 const form = document.forms.form;
 
+// Returns random number between 0 to 19, used to randomly access 1 image in array of images.
 function random() {
     return Math.floor(Math.random() * 19);
 }
 
+// ANIMATION: Ball increases in size during animation for this step
 function grow() {
     if (window.matchMedia("(max-width: 450px)").matches) {
         ball.style.width = "18rem";
@@ -22,6 +24,7 @@ function grow() {
   }
 }
 
+// ANIMATION: Ball decreases in size during animation for this step
 function shrink() {
     if (window.matchMedia("(max-width: 450px)").matches) {
         ball.style.width = "15rem";
@@ -36,8 +39,12 @@ function shrink() {
 }
 
 function ask(text) {
+    // Removes 'Ask' button until animation is complete
     button.remove();
+    // Blurs background image during animation
     document.body.style.backgroundImage = "url(images/ball_background_blur.jpg)"; 
+
+    // Removes question box in form and replaces with question that user asked
     question_box.remove();
     const display = document.createElement('div');
     display.innerHTML = "You asked: " + text;
@@ -45,19 +52,20 @@ function ask(text) {
     display.style.color = "white";
     display.style.fontFamily = "Didact Gothic";
     display.style.transition = "1s";
-
+    // Sets size of question user asked depending on size of user's window
     if (window.matchMedia("(max-width: 450px)").matches) {
         display.style.fontSize = "2.5rem";
     } else {
         display.style.fontSize = "3.3rem";
     }
 
+    // Inserts question that user asked into document
     document.getElementById('label').after(display);
 
     // Changes image of ball to blank while animation is running
     ball.src = "images\\magic8ball_extra.png";
 
-    // Animation for movement of ball, moves less on a smaller screen
+    // ANIMATION: Movement of ball left and right, moves less on a smaller screen
     if (window.matchMedia("(max-width: 450px)").matches) {
         ball.style.transform = "translate(75px)";
         setTimeout(function() {
@@ -119,27 +127,35 @@ function ask(text) {
     ]
 
     setTimeout(function() {
+        // Sets image of ball to a random image, calls random number generation function
         ball.src = images[random()];
     }, 3000);
     setTimeout(function() {
+        // Calls function that increases size of ball to display to user
         grow();
     }, 3500);
     setTimeout(function() {
+        // Reduces the size of the ball after animation is complete
         shrink();
+        // Returns image of ball to default, starting image
         document.body.style.backgroundImage = "url(images/ball_background.jpg)"; 
     },5500);
     setTimeout(function() { 
+        // Removes question user asked
         display.remove();
+        // Places back the input question box on the forms
         document.getElementById('label').after(question_box);
         question_box.after(button);
     },7500);
 }
 
+// When user clicks 'Ask' button, will grab input data and pass to function ask()
 form.onsubmit = function(event) {
     event.preventDefault();
     const data = new FormData(event.target);
     const text = data.get('text');
     
+    // Checks if input is blank, if blank will alert, if not will call ask function
     if (text == "") {
         alert("You didn't ask a question");
     } else {
