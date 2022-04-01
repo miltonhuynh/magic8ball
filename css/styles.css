@@ -1,3 +1,4 @@
+/* Applies background image, flexbox, main container for all objects */
 body {
     background-image: url("../images/ball_background.jpg");
     background-size: cover;
@@ -8,39 +9,47 @@ body {
     transition: 3s;
 }
 
+/* Style for the header, 'Magic 8 Ball' */
 #title {
     font-size: 4.5rem;
     font-family: 'Shadows Into Light', cursive;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
     transition: 0.6s;
     text-shadow: 10px 10px 2px black;
 }
 
+/* Upon hover, header will increase in font-size and become lose transparency */
 #title:hover {
     font-size: 5.25rem !important;
+    color: rgba(255, 255, 255, 1);
 }
 
+/* Applies flex-box to question form */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Style for 'Ask me anything' */
 #label {
     font-size: 3rem;
     margin-bottom: 0;
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
     text-shadow: 5px 5px 4px black;
     font-family: 'Indie Flower', cursive;
     transition: 0.6s;
 }
 
+/* Upon hover, 'Ask me anything' will increase in font-size and become lose transparency */
 #label:hover {
     font-size: 3.5rem !important;
+    color: rgba(255, 255, 255, 1);
 }
 
+/* Style for input box for user to type in */
 #ask {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -55,6 +64,7 @@ form {
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 
+/* Style for button to submit form */
 #button {
     height: 3rem;
     width: 7rem;
@@ -68,6 +78,7 @@ form {
     font-family: 'Staatliches', cursive;
 }
 
+/* Upon hover, button will increase in size */
 #button:hover {
     height: 3.3rem;
     width: 8.2rem;
@@ -75,6 +86,7 @@ form {
     border: 2px solid white;
 }
 
+/* Style for image of Magic 8 ball */
 #ball {
     transition: 1s;
     width: 20rem;
@@ -82,7 +94,8 @@ form {
     position: relative;
 }
 
-#footer {
+/* Style for div that contains button that links to source code */
+#github {
     top: 1rem;
     position: absolute;
     color: white;
@@ -91,20 +104,23 @@ form {
     padding-top: 0.5rem;
 }
 
+/* Style for button that links to source code */
 .fab {
-    color: white;
+    color:rgba(255, 255, 255, 0.75);
     position: absolute;
     left: 1rem;
-    font-size: 6rem;
+    font-size: 7rem;
     transition: 0.6s;
     text-shadow: 5px 5px 2px black;
 }
 
+/* Upon hover, github link button will increase in size and lose transparency */
 .fab:hover {
-    color: black;
-    font-size: 7rem;
+    color:rgba(255, 255, 255, 1);
+    font-size: 8.5rem;
 }
 
+/* Media queries used for optimal sizing on mobile devices */
 @media (max-width: 450px) {
     #title {
         font-size: 2.5rem;
